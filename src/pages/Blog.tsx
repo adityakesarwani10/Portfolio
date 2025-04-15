@@ -1,6 +1,8 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Blog = () => {
   const posts = [
@@ -25,8 +27,9 @@ const Blog = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24 bg-gradient-to-b from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900">
+      <Navbar />
+      <div className="container mx-auto px-4 pt-24 pb-16">
         <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
           Latest Insights
         </h1>
@@ -54,6 +57,7 @@ const Blog = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
