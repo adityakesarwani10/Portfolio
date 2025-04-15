@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,15 +9,15 @@ import Footer from "@/components/Footer";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 dark:from-slate-950 dark:via-purple-950/30 dark:to-slate-950 animate-fade-in">
       <Navbar />
       <div className="container mx-auto px-4 pt-24 pb-16">
-        <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+        <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-pulse">
           Get In Touch
         </h1>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <Card className="bg-slate-800/50 dark:bg-slate-900/50 border-purple-500/20 backdrop-blur-sm">
+          <Card className="bg-slate-800/60 dark:bg-slate-900/60 border-purple-500/30 backdrop-blur-xl shadow-2xl hover:scale-[1.02] transition-transform duration-300">
             <CardContent className="p-8">
               <h2 className="text-2xl font-semibold text-gray-200 mb-6">Contact Information</h2>
               
@@ -48,20 +49,33 @@ const Contact = () => {
               
               <h3 className="text-xl font-semibold text-gray-200 mt-10 mb-4">Connect</h3>
               <div className="flex space-x-4">
-                <Button variant="outline" size="icon" className="rounded-full border-purple-500/30 text-purple-400 hover:text-purple-300 hover:bg-purple-500/10">
+                {/* Social buttons with hover effects */}
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="rounded-full border-purple-500/40 text-purple-400 hover:bg-purple-500/20 hover:text-purple-300 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
+                >
                   <Github className="h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="icon" className="rounded-full border-purple-500/30 text-purple-400 hover:text-purple-300 hover:bg-purple-500/10">
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="rounded-full border-purple-500/40 text-purple-400 hover:bg-purple-500/20 hover:text-purple-300 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
+                >
                   <Linkedin className="h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="icon" className="rounded-full border-purple-500/30 text-purple-400 hover:text-purple-300 hover:bg-purple-500/10">
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="rounded-full border-purple-500/40 text-purple-400 hover:bg-purple-500/20 hover:text-purple-300 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
+                >
                   <Twitter className="h-5 w-5" />
                 </Button>
               </div>
             </CardContent>
           </Card>
           
-          <Card className="bg-slate-800/50 dark:bg-slate-900/50 border-purple-500/20 backdrop-blur-sm">
+          <Card className="bg-slate-800/60 dark:bg-slate-900/60 border-purple-500/30 backdrop-blur-xl shadow-2xl hover:scale-[1.02] transition-transform duration-300">
             <CardContent className="p-8">
               <h2 className="text-2xl font-semibold text-gray-200 mb-6">Send a Message</h2>
               
@@ -106,7 +120,7 @@ const Contact = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white"
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-700 hover:from-purple-700 hover:to-pink-800 text-white transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Send Message
                 </Button>
