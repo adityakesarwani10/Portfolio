@@ -1,10 +1,9 @@
-
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, GitHub, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 import Footer from "@/components/Footer";
 
 const Contact = () => {
@@ -50,7 +49,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-gray-200 mt-10 mb-4">Connect</h3>
               <div className="flex space-x-4">
                 <Button variant="outline" size="icon" className="rounded-full border-purple-500/30 text-purple-400 hover:text-purple-300 hover:bg-purple-500/10">
-                  <GitHub className="h-5 w-5" />
+                  <Github className="h-5 w-5" />
                 </Button>
                 <Button variant="outline" size="icon" className="rounded-full border-purple-500/30 text-purple-400 hover:text-purple-300 hover:bg-purple-500/10">
                   <Linkedin className="h-5 w-5" />
