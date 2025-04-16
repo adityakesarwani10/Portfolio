@@ -5,6 +5,7 @@ import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Atom, Code, Database, Cpu, LineChart } from "lucide-react";
 import Footer from "@/components/Footer";
+import BackgroundEffects from "@/components/BackgroundEffects";
 
 const Skills = () => {
   const technicalSkills = [
@@ -72,9 +73,10 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900">
+    <div className="min-h-screen relative overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900 via-slate-900 to-black">
+      <BackgroundEffects />
       <Navbar />
-      <div className="container mx-auto px-4 pt-24 pb-16">
+      <div className="container mx-auto px-4 pt-24 pb-16 relative z-10 animate-fade-in">
         <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
           Skills & Expertise
         </h1>

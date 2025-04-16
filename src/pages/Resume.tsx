@@ -4,8 +4,9 @@ import { ArrowRight, Microscope, Atom, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BackgroundEffects from "@/components/BackgroundEffects";
 
-const Research = () => {
+const Resume = () => {
   const projects = [
     {
       title: "Quantum Neural Networks",
@@ -31,9 +32,10 @@ const Research = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900">
+    <div className="min-h-screen relative overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900 via-slate-900 to-black">
+      <BackgroundEffects />
       <Navbar />
-      <div className="container mx-auto px-4 pt-24 pb-16">
+      <div className="container mx-auto px-4 pt-24 pb-16 relative z-10 animate-fade-in">
         <h1 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
           Research Projects
         </h1>
@@ -41,7 +43,7 @@ const Research = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="bg-slate-800/50 dark:bg-slate-900/50 border-purple-500/20 backdrop-blur-sm hover:border-purple-500/40 transition-colors"
+              className="bg-slate-800/50 dark:bg-slate-900/50 border-purple-500/20 backdrop-blur-sm hover:border-purple-500/40 transition-colors animate-scale"
             >
               <CardContent className="p-6">
                 <div className="mb-6">
@@ -77,4 +79,4 @@ const Research = () => {
   );
 };
 
-export default Research;
+export default Resume;

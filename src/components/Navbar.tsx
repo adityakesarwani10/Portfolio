@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
-  const menuItems = ["Home", "About", "Projects", "Skills", "Blog", "Research", "Contact"];
+  const menuItems = ["Home", "About", "Projects", "Skills", "Blog", "Resume", "Contact"];
 
   return (
     <nav className="fixed top-0 w-full z-50">

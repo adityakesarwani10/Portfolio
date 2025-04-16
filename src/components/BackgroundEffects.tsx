@@ -10,8 +10,8 @@ const BackgroundEffects = () => {
         <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-20" />
       </div>
 
-      {/* Floating orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full filter blur-3xl animate-float" />
+      {/* Floating orbs with improved animations */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full filter blur-3xl animate-[float_8s_ease-in-out_infinite]" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-600/10 rounded-full filter blur-3xl animate-[float_6s_ease-in-out_infinite_reverse]" />
       <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-cyan-600/10 rounded-full filter blur-3xl animate-[float_10s_ease-in-out_infinite]" />
 
