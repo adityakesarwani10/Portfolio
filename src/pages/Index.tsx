@@ -10,15 +10,17 @@ import BackgroundEffects from "@/components/BackgroundEffects";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900 via-slate-900 to-black">
+    <div className="min-h-screen relative overflow-hidden bg-slate-950">
       <BackgroundEffects />
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 };
