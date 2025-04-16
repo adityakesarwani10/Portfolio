@@ -8,24 +8,26 @@ import Footer from "@/components/Footer";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-700 via-blue-900 to-black dark:from-blue-950 dark:via-slate-900 dark:to-black relative overflow-hidden animate-fade-in">
-      {/* Futuristic animated gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-cyan-500/5 to-transparent animate-pulse" />
-      
-      {/* Geometric patterns */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_25%,rgba(68,68,68,.2)_50%,transparent_50%,transparent_75%,rgba(68,68,68,.2)_75%)] bg-[length:4rem_4rem] animate-[pulse_4s_ease-in-out_infinite]" />
+    <div className="min-h-screen relative overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900 via-slate-900 to-black animate-fade-in">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 via-cyan-500/5 to-blue-500/10 animate-[pulse_8s_ease-in-out_infinite]" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
       </div>
+
+      {/* Floating orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full filter blur-3xl animate-[float_8s_ease-in-out_infinite]" />
+      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-600/10 rounded-full filter blur-3xl animate-[float_6s_ease-in-out_infinite_reverse]" />
+      <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-cyan-600/10 rounded-full filter blur-3xl animate-[float_10s_ease-in-out_infinite]" />
 
       <Navbar />
       <div className="container mx-auto px-4 pt-24 pb-16 relative z-10">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 animate-pulse">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 opacity-0 animate-[fadeIn_1s_ease-out_0.3s_forwards] bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
           Get In Touch
         </h1>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Keep existing card code but update their styling */}
-          <Card className="bg-slate-900/40 dark:bg-slate-950/40 border-cyan-500/20 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_8px_32px_rgba(31,127,255,0.2)]">
+          <Card className="opacity-0 animate-[fadeIn_1s_ease-out_0.6s_forwards] bg-slate-900/40 backdrop-blur-xl border-cyan-500/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:scale-[1.02] hover:shadow-[0_8px_32px_rgba(31,127,255,0.2)] transition-all duration-500 ease-out group">
             <CardContent className="p-8">
               <h2 className="text-2xl font-semibold text-gray-200 mb-6">Contact Information</h2>
               
@@ -83,7 +85,7 @@ const Contact = () => {
             </CardContent>
           </Card>
           
-          <Card className="bg-slate-900/40 dark:bg-slate-950/40 border-cyan-500/20 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_8px_32px_rgba(31,127,255,0.2)]">
+          <Card className="opacity-0 animate-[fadeIn_1s_ease-out_0.9s_forwards] bg-slate-900/40 backdrop-blur-xl border-cyan-500/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:scale-[1.02] hover:shadow-[0_8px_32px_rgba(31,127,255,0.2)] transition-all duration-500 ease-out group">
             <CardContent className="p-8">
               <h2 className="text-2xl font-semibold text-gray-200 mb-6">Send a Message</h2>
               
@@ -138,11 +140,9 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Animated background elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/40 to-transparent" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl animate-[pulse_4s_ease-in-out_infinite]" />
-      <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl animate-[pulse_6s_ease-in-out_infinite]" />
-
+      {/* Neural network-like background pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:24px_24px] opacity-20" />
+      
       <Footer />
     </div>
   );
