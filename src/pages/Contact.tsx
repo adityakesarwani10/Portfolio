@@ -27,7 +27,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-purple-400 mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-gray-300">Email</h3>
-                    <p className="text-gray-400">contact@quantum-dev.com</p>
+                    <p className="text-gray-400">adityakesarwani073@gmail.com</p>
                   </div>
                 </div>
                 
@@ -35,7 +35,7 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-purple-400 mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-gray-300">Phone</h3>
-                    <p className="text-gray-400">+1 (555) 123-4567</p>
+                    <p className="text-gray-400">+91 91400 40247</p>
                   </div>
                 </div>
                 
@@ -43,7 +43,7 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-purple-400 mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-gray-300">Location</h3>
-                    <p className="text-gray-400">San Francisco, California</p>
+                    <p className="text-gray-400">Prayagraj, India</p>
                   </div>
                 </div>
               </div>
@@ -55,6 +55,7 @@ const Contact = () => {
                   variant="outline" 
                   size="icon" 
                   className="rounded-full border-purple-500/40 text-purple-400 hover:bg-purple-500/20 hover:text-purple-300 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
+                  onClick={() => window.open("https://github.com/adityakesarwani10", "_blank")}
                 >
                   <Github className="h-5 w-5" />
                 </Button>
@@ -62,6 +63,7 @@ const Contact = () => {
                   variant="outline" 
                   size="icon" 
                   className="rounded-full border-purple-500/40 text-purple-400 hover:bg-purple-500/20 hover:text-purple-300 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
+                  onClick={() => window.open("https://www.linkedin.com/in/aditya-kesarwani-057b56311/", "_blank")}
                 >
                   <Linkedin className="h-5 w-5" />
                 </Button>
@@ -69,6 +71,7 @@ const Contact = () => {
                   variant="outline" 
                   size="icon" 
                   className="rounded-full border-purple-500/40 text-purple-400 hover:bg-purple-500/20 hover:text-purple-300 transition-all duration-300 transform hover:-translate-y-1 hover:scale-110"
+                  onClick={() => window.open("https://x.com/adityakesa64986", "_blank")}
                 >
                   <Twitter className="h-5 w-5" />
                 </Button>

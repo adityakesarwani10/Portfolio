@@ -6,20 +6,20 @@ const About = () => {
   const highlights = [
     {
       icon: Cpu,
-      title: "AI Development",
-      description: "Developing cutting-edge AI solutions with advanced neural networks and machine learning algorithms."
+      title: "Web Development",
+      description: "Crafting responsive and user-friendly web experiences with modern technologies."
     },
     {
       icon: Brain,
-      title: "Quantum Computing",
-      description: "Exploring quantum algorithms and their applications in solving complex computational problems."
+      title: "DSA Problem Solver",
+      description: "Mastering data structures and algorithms to tackle challenging problems with efficiency and precision."
     },
     {
       icon: Rocket,
       title: "Future Tech",
       description: "Building scalable and future-proof architectures for next-generation applications."
     }
-  ];
+    ];
 
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
@@ -31,10 +31,7 @@ const About = () => {
           <Card className="bg-slate-800/50 border-purple-500/20 backdrop-blur-sm">
             <CardContent className="p-8">
               <p className="text-gray-300 mb-8 leading-relaxed">
-                With over a decade of experience in AI and quantum computing, I've been at the 
-                forefront of technological innovation. My work focuses on bridging the gap between 
-                theoretical quantum mechanics and practical AI applications.
-              </p>
+                Hello everyone, my name is Aditya Kesarwani. I belong to Prayagraj and I am pursuing a B.Tech in Computer Science and Engineering, specialized in AI and ML, from United Institute of Technology. I am good at communication skills and a passionate programmer. I enjoy solving problems on LeetCode and have a keen interest in competitive programming. My hobbies include reading books and actively participating in extracurricular activities. </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                 {highlights.map((item, index) => (
                   <div key={index} className="text-center space-y-4">

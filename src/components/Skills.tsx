@@ -5,21 +5,18 @@ import { Badge } from "./ui/badge";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "AI & Machine Learning",
-      skills: ["TensorFlow", "PyTorch", "Neural Networks", "Computer Vision", "NLP", "Deep Learning"]
+      category: "Competitive Programming",
+      skills: ["Leetcode", "Hackerrank", "GeeksForGeeks", "Code Forces"]
     },
     {
-      category: "Quantum Computing",
-      skills: ["Qiskit", "Q#", "Quantum Algorithms", "Quantum ML", "Error Correction", "Circuit Design"]
+      category: "Programming",
+      skills: ["Java", "C++", "Python", "C"]
     },
     {
       category: "Full Stack Development",
-      skills: ["React", "Node.js", "Python", "TypeScript", "GraphQL", "WebAssembly"]
+      skills: ["React", "Node.js", "JavaScript", "TypeScript", "MongoDB", "MySQL"]
     },
-    {
-      category: "Cloud & DevOps",
-      skills: ["AWS", "Google Cloud", "Docker", "Kubernetes", "CI/CD", "Terraform"]
-    }
+    
   ];
 
   return (

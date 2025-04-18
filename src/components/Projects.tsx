@@ -7,23 +7,23 @@ import { Button } from "./ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: "NeuroVerse AI",
+      title: "NutriScan AI",
       description: "A revolutionary AI platform that combines neural networks with quantum computing capabilities for unprecedented problem-solving abilities.",
-      technologies: ["Python", "TensorFlow", "Quantum", "React"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-      demo: "https://demo.example.com",
-      github: "https://github.com"
+      technologies: ["Node.js", "Express", "Javascript", "React"],
+      image: "/NutrScan.png",
+      demo: "nutri-scan-plum.vercel.app",
+      github: "https://github.com/adityakesarwani10/NutriScan"
     },
     {
-      title: "Quantum Bridge",
+      title: "RescuePrint",
       description: "Bridging classical computing with quantum systems through an innovative middleware solution.",
-      technologies: ["Qiskit", "TypeScript", "Node.js", "AWS"],
+      technologies: ["HTML", "CSS", "Node.js", "Expess"],
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
       demo: "https://demo.example.com",
       github: "https://github.com"
     },
     {
-      title: "FutureStack",
+      title: "Weather Forcast",
       description: "Next-generation cloud infrastructure with built-in quantum-resistant security protocols.",
       technologies: ["Rust", "Go", "Kubernetes", "WebAssembly"],
       image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833",

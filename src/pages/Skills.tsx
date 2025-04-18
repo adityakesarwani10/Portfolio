@@ -9,29 +9,19 @@ import BackgroundEffects from "@/components/BackgroundEffects";
 
 const Skills = () => {
   const technicalSkills = [
-    { name: "Quantum Computing", level: 95 },
-    { name: "Machine Learning", level: 92 },
+    { name: "Java", level: 95 },
+    { name: "DSA", level: 92 },
     { name: "Python", level: 90 },
-    { name: "TensorFlow", level: 88 },
-    { name: "PyTorch", level: 85 },
+    { name: "C", level: 88 },
+    { name: "MySQL", level: 85 },
     { name: "JavaScript/TypeScript", level: 80 },
     { name: "React", level: 78 },
     { name: "C++", level: 75 },
-    { name: "Data Visualization", level: 85 }
+    { name: "MongoDB", level: 85 }
   ];
 
-  const researchSkills = [
-    { name: "Quantum Algorithms", level: 95 },
-    { name: "Neural Networks", level: 90 },
-    { name: "Quantum Error Correction", level: 88 },
-    { name: "Reinforcement Learning", level: 85 },
-    { name: "Computer Vision", level: 80 },
-    { name: "Natural Language Processing", level: 75 },
-    { name: "Quantum Machine Learning", level: 92 }
-  ];
 
   const softSkills = [
-    { name: "Research & Analysis", level: 95 },
     { name: "Problem Solving", level: 93 },
     { name: "Scientific Writing", level: 90 },
     { name: "Team Leadership", level: 85 },
@@ -48,12 +38,6 @@ const Skills = () => {
       skills: technicalSkills
     },
     {
-      id: "research",
-      label: "Research",
-      icon: <Atom className="h-4 w-4" />,
-      skills: researchSkills
-    },
-    {
       id: "soft",
       label: "Soft Skills",
       icon: <LineChart className="h-4 w-4" />,
@@ -62,15 +46,13 @@ const Skills = () => {
   ];
 
   const tools = [
-    { name: "TensorFlow", icon: Cpu, level: "Expert" },
-    { name: "PyTorch", icon: Atom, level: "Expert" },
-    { name: "Qiskit", icon: Atom, level: "Expert" },
-    { name: "Scikit-learn", icon: LineChart, level: "Advanced" },
+    { name: "React", icon: Cpu, level: "Expert" },
+    { name: "JS", icon: Atom, level: "Expert" },
+    { name: "TS", icon: Atom, level: "Expert" },
     { name: "SQL", icon: Database, level: "Advanced" },
     { name: "React", icon: Code, level: "Intermediate" },
     { name: "Git", icon: Code, level: "Advanced" },
-    { name: "Docker", icon: Database, level: "Intermediate" }
-  ];
+    { name: "Node.js", icon: Code, level: "Intermediate" },];
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900 via-slate-900 to-black">

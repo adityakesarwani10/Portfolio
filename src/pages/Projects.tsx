@@ -9,28 +9,28 @@ import BackgroundEffects from "@/components/BackgroundEffects";
 const Projects = () => {
   const projects = [
     {
-      title: "Quantum Neural Network Framework",
-      description: "A framework for building and training quantum neural networks that combines classical deep learning with quantum computing principles.",
-      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070",
-      tags: ["Quantum Computing", "Neural Networks", "Python", "TensorFlow"],
-      github: "https://github.com/username/quantum-nn",
-      demo: "https://quantum-nn-demo.com"
+      title: "NutriScan",
+      description: "An AI-based website that shows the Nutritional informations.",
+      image: "/NutrScan.png",
+      tags: ["React", "Node.js", "Express", "Tailwind CSS"],
+      github: "https://github.com/adityakesarwani10/NutriScan",
+      demo: "nutri-scan-plum.vercel.app"
     },
     {
-      title: "AI Ethics Dashboard",
-      description: "Interactive dashboard for monitoring and assessing ethical implications of AI systems, with real-time analysis and recommendations.",
-      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070",
-      tags: ["Ethics", "AI", "Dashboard", "React", "D3.js"],
-      github: "https://github.com/username/ai-ethics",
-      demo: "https://ai-ethics-dashboard.com"
+      title: "RescuePrint",
+      description: "An real-word based problem based site that shows the the details of an unconsious victum an an accident case.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      tags: ["HTML", "CSS", "Javascript", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/adityakesarwani10/RescuePrint",
+      demo: "https://adityakesarwani10.github.io/RescuePrint/Component/Login/index.html"
     },
     {
-      title: "Quantum Error Correction Simulator",
-      description: "Simulation tool for testing various quantum error correction codes and their effectiveness in different noise environments.",
-      image: "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?q=80&w=2036",
-      tags: ["Quantum Computing", "Error Correction", "Simulation", "C++"],
-      github: "https://github.com/username/qec-sim",
-      demo: "https://qec-simulator.com"
+      title: "Weather forecast",
+      description: "This is a site that shows the weather details in a real-time.",
+      image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833",
+      tags: ["HTML", "CSS", "Javascript"],
+      github: "https://github.com/adityakesarwani10/Weather-App",
+      demo: "#"
     }
   ];
 
@@ -68,7 +68,7 @@ const Projects = () => {
                     </Badge>
                   ))}
                 </div>
-                <div className="flex justify-between">
+                <div className="flex gap justify-between">
                   <Button 
                     variant="outline" 
                     size="sm"

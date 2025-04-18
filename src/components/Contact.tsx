@@ -8,25 +8,25 @@ const Contact = () => {
     {
       name: "Email",
       icon: Mail,
-      link: "mailto:john@quantum.ai",
+      link: "mailto:aditykesarwani073@gmail.com",
       color: "text-pink-400"
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/aditya-kesarwani-057b56311/",
       color: "text-blue-400"
     },
     {
       name: "GitHub",
       icon: Github,
-      link: "https://github.com",
+      link: "https://github.com/adityakesarwani10",
       color: "text-purple-400"
     },
     {
       name: "Twitter",
       icon: Twitter,
-      link: "https://twitter.com",
+      link: "https://x.com/adityakesa64986",
       color: "text-sky-400"
     }
   ];
@@ -40,7 +40,7 @@ const Contact = () => {
         <Card className="max-w-lg mx-auto bg-slate-800/50 border-purple-500/20 backdrop-blur-sm">
           <CardContent className="p-8">
             <p className="text-center text-gray-300 mb-8">
-              Interested in collaborating on cutting-edge AI and quantum computing projects? 
+              Interested in collaborating on cutting-edge web development and competative programming? 
               Let's connect and explore the possibilities of future technology together.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

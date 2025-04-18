@@ -19,71 +19,34 @@ const About = () => {
           <Card className="bg-slate-800/50 dark:bg-slate-900/50 border-purple-500/20 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="prose prose-invert max-w-none">
-                <p className="text-gray-300 mb-6">
-                  I'm a quantum computing researcher and AI enthusiast with over 10 years of experience in developing cutting-edge technologies. My work focuses on the intersection of quantum mechanics and artificial intelligence, exploring new possibilities for computation and problem-solving.
+                <p className="text-gray-300 text-lg mb-6">
+                Hello everyone, my name is Aditya Kesarwani. I belong to Prayagraj and I am pursuing a B.Tech in Computer Science and Engineering, specialized in AI and ML, from United Institute of Technology. I am good at communication skills and a passionate programmer. I enjoy solving problems on LeetCode and have a keen interest in competitive programming. My hobbies include reading books and actively participating in extracurricular activities.
                 </p>
                 
                 <h2 className="text-2xl font-semibold text-gray-200 mt-8 mb-4">Education</h2>
                 <ul className="space-y-4 list-none pl-0">
                   <li className="p-4 bg-slate-700/30 rounded-lg">
                     <div className="flex justify-between">
-                      <span className="font-semibold text-purple-400">Ph.D. Quantum Computing</span>
-                      <span className="text-gray-400">2018-2022</span>
+                      <span className="font-semibold text-purple-400">B.tech CSE-AIML</span>
+                      <span className="text-gray-400">2023-2027</span>
                     </div>
-                    <p className="text-gray-300 mt-2">California Institute of Technology</p>
+                    <p className="text-gray-300 mt-2">United Institute of Technology</p>
                   </li>
                   <li className="p-4 bg-slate-700/30 rounded-lg">
                     <div className="flex justify-between">
-                      <span className="font-semibold text-purple-400">M.S. Computer Science</span>
-                      <span className="text-gray-400">2016-2018</span>
+                      <span className="font-semibold text-purple-400">Intermedieate</span>
+                      <span className="text-gray-400">2021-2023</span>
                     </div>
-                    <p className="text-gray-300 mt-2">Stanford University</p>
+                    <p className="text-gray-300 mt-2">Maharishi Dayanand Convent School</p>
                   </li>
                   <li className="p-4 bg-slate-700/30 rounded-lg">
                     <div className="flex justify-between">
-                      <span className="font-semibold text-purple-400">B.S. Physics</span>
-                      <span className="text-gray-400">2012-2016</span>
+                      <span className="font-semibold text-purple-400">High School</span>
+                      <span className="text-gray-400">2019-2021</span>
                     </div>
-                    <p className="text-gray-300 mt-2">MIT</p>
+                    <p className="text-gray-300 mt-2">Jumna Christian Junior High School</p>
                   </li>
                 </ul>
-                
-                <h2 className="text-2xl font-semibold text-gray-200 mt-8 mb-4">Professional Experience</h2>
-                <div className="space-y-6">
-                  <div className="p-5 bg-slate-700/30 rounded-lg">
-                    <div className="flex flex-wrap justify-between items-start mb-3">
-                      <h3 className="text-xl font-medium text-purple-400">Senior Quantum Researcher</h3>
-                      <div className="flex items-center mt-1 sm:mt-0">
-                        <span className="text-gray-400">QuantumTech Labs</span>
-                        <span className="mx-2 text-gray-500">•</span>
-                        <span className="text-gray-400">2022-Present</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-300">Leading research in quantum neural networks and developing novel algorithms for quantum computers.</p>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">Quantum Computing</Badge>
-                      <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">Neural Networks</Badge>
-                      <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">AI</Badge>
-                    </div>
-                  </div>
-                  
-                  <div className="p-5 bg-slate-700/30 rounded-lg">
-                    <div className="flex flex-wrap justify-between items-start mb-3">
-                      <h3 className="text-xl font-medium text-purple-400">AI Research Engineer</h3>
-                      <div className="flex items-center mt-1 sm:mt-0">
-                        <span className="text-gray-400">DeepMind</span>
-                        <span className="mx-2 text-gray-500">•</span>
-                        <span className="text-gray-400">2018-2022</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-300">Developed machine learning models for complex problem-solving and optimization challenges.</p>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">Machine Learning</Badge>
-                      <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">Deep Learning</Badge>
-                      <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">TensorFlow</Badge>
-                    </div>
-                  </div>
-                </div>
               </div>
             </CardContent>
           </Card>

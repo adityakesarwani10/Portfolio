@@ -1,17 +1,18 @@
-
+// Removed unused import as the module does not exist
+import img from "Portfolio\build-my-resume-kit\public\aditya_profile.jpeg"
 import { Button } from "./ui/button";
 import { ArrowDown, Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-start justify-center pt-32 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-start justify-center pt-32 mt-23 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-48 h-48 md:w-64 md:h-64 relative rounded-full overflow-hidden border-4 border-purple-500/20">
               <img
-                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5"
+                src="../../public/aditya_profile.jpeg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
@@ -19,16 +20,15 @@ const Hero = () => {
             <div className="text-left space-y-4">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                  John Quantum
+                  Aditya kesarwani
                 </span>
               </h1>
               <h2 className="text-xl md:text-2xl text-gray-400">
-                AI Engineer & Future Architect
-                <span className="text-purple-400"> based in San Francisco</span>
+                
+                <span className="text-purple-400"> Web developer & Software Engineer</span>
               </h2>
               <p className="text-lg text-gray-400 max-w-2xl leading-relaxed">
-                Building the bridge between human creativity and artificial intelligence.
-                Specializing in neural networks, quantum computing, and future-proof architectures.
+                Building solution on the based of real-world problems. 
               </p>
             </div>
           </div>
@@ -57,10 +57,6 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-purple-400" />
         </div>
       </div>
     </section>

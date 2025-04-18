@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
-  const menuItems = ["Home", "About", "Projects", "Skills", "Blog", "Resume", "Contact"];
+  const menuItems = ["Home", "About", "Projects", "Skills", "Resume", "Contact"];
 
   return (
     <nav className="fixed top-0 w-full z-50">
@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 relative">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-            Quantum.Dev
+            Aditya kesarwani
           </Link>
           
           <div className="hidden md:flex space-x-8 items-center">

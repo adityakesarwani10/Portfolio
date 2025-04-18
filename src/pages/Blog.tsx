@@ -8,9 +8,9 @@ import BackgroundEffects from "@/components/BackgroundEffects";
 const Blog = () => {
   const posts = [
     {
-      title: "Quantum Computing Breakthroughs",
+      title: "NutriScan",
       date: "2025-04-10",
-      excerpt: "Exploring recent advances in quantum computing and their implications for AI.",
+      excerpt: ".",
       tags: ["Quantum", "AI", "Technology"]
     },
     {

@@ -1,73 +1,48 @@
 # Welcome to your Lovable project
+## About Me
 
-## Project info
+Hello! I'm a passionate developer with a focus on creating impactful and user-friendly applications. I enjoy working with modern web technologies and continuously learning to improve my skills.
 
-**URL**: https://lovable.dev/projects/70d54ec7-8df5-4152-bf30-1c302a981f8e
+## Projects
 
-## How can I edit this code?
+### Build My Resume Kit
+A tool designed to help users create professional resumes effortlessly. Built with React, TypeScript, and Tailwind CSS, it provides a seamless and customizable experience.
 
-There are several ways of editing your application.
+**Features:**
+- Interactive UI for building resumes.
+- Export options for PDF and Word formats.
+- Responsive design for all devices.
+### Technologies Used
 
-**Use Lovable**
+The following technologies were utilized to build this project:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/70d54ec7-8df5-4152-bf30-1c302a981f8e) and start prompting.
+- **Frontend:**
+    - React
+    - TypeScript
+    - Tailwind CSS
+    - shadcn
+    - lucide
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Backend:**
+    - Node.js
 
-**Use your preferred IDE**
+- **Build Tools:**
+    - Vite
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+<!-- **Live Demo:** [Build My Resume Kit](https://lovable.dev/projects/70d54ec7-8df5-4152-bf30-1c302a981f8e) -->
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Skills
 
-Follow these steps:
+- **Frontend Development:** React, TypeScript, Tailwind CSS, HTML, CSS, JavaScript
+- **Backend Development:** Node.js, Express
+- **Tools & Platforms:** Git, GitHub, Vite, npm, shadcn-ui
+- **Other Skills:** Responsive Design, UI/UX Design, Problem Solving
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Contact
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Feel free to reach out to me for collaboration or inquiries:
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/70d54ec7-8df5-4152-bf30-1c302a981f8e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **Email:** [your-email@example.com](mailto:adityakesarwani@gmail.com)
+- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/aditya-kesarwani-057b56311/)
+- **GitHub:** [Your GitHub Profile](https://github.com/adityakesarwani10)
+- **Portfolio:** [Your Portfolio Website](https://.com)
