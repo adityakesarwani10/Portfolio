@@ -25,12 +25,12 @@ const Hero = () => {
     window.addEventListener("resize", resizeCanvas);
 
     const particlesArray: Particle[] = [];
-    const numberOfParticles = 100;
+    const numberOfParticles = 200; // Increased number of particles
 
     const mouse = {
       x: null as number | null,
       y: null as number | null,
-      radius: 150,
+      radius: 200, // Increased radius for better visibility
     };
 
     window.addEventListener("mousemove", (event) => {
@@ -57,14 +57,14 @@ const Hero = () => {
         this.y = y;
         this.baseX = x;
         this.baseY = y;
-        this.size = 1;
-        this.density = Math.random() * 30 + 1;
+        this.size = Math.random() * 3 + 1; // Increased size range
+        this.density = Math.random() * 40 + 1; // Adjusted density for smoother movement
 
         const colors = [
-          "rgba(147, 51, 234, 0.7)",
-          "rgba(79, 70, 229, 0.7)",
-          "rgba(59, 130, 246, 0.7)",
-          "rgba(139, 92, 246, 0.7)",
+          "rgba(147, 51, 234, 0.9)",
+          "rgba(79, 70, 229, 0.9)",
+          "rgba(59, 130, 246, 0.9)",
+          "rgba(139, 92, 246, 0.9)",
         ];
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
@@ -125,10 +125,10 @@ const Hero = () => {
           const dy = particlesArray[a].y - particlesArray[b].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 120) {
-            opacityValue = 1 - distance / 120;
+          if (distance < 150) { // Increased connection distance
+            opacityValue = 1 - distance / 150;
             ctx.strokeStyle = `rgba(147, 112, 219, ${opacityValue})`;
-            ctx.lineWidth = 0.8;
+            ctx.lineWidth = 1; // Slightly thicker lines
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
             ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
