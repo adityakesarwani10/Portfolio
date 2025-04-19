@@ -218,7 +218,7 @@ const Hero = () => {
               className="border-purple-600 text-purple-400"
               asChild
             >
-              <a href="/projects" className="flex items-center gap-2">
+              <a href="#projects" className="flex items-center gap-2">
                 View Projects
               </a>
             </Button>
