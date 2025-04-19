@@ -27,7 +27,7 @@ const Projects = () => {
       description: "Next-generation cloud infrastructure with built-in quantum-resistant security protocols.",
       technologies: ["Rust", "Go", "Kubernetes", "WebAssembly"],
       image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833",
-      demo: "https://demo.example.com",
+      demo: "https://weather-app-tau-six-74.vercel.app/",
       github: "https://github.com"
     }
   ];

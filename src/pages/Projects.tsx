@@ -14,7 +14,7 @@ const Projects = () => {
       image: "/NutrScan.png",
       tags: ["React", "Node.js", "Express", "Tailwind CSS"],
       github: "https://github.com/adityakesarwani10/NutriScan",
-      demo: "nutri-scan-plum.vercel.app"
+      demo: "https://nutri-scan-plum.vercel.app"
     },
     {
       title: "RescuePrint",
@@ -30,7 +30,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833",
       tags: ["HTML", "CSS", "Javascript"],
       github: "https://github.com/adityakesarwani10/Weather-App",
-      demo: "#"
+      demo: "https://weather-app-tau-six-74.vercel.app/"
     }
   ];
 
