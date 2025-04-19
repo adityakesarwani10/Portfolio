@@ -64,7 +64,7 @@ const Hero = () => {
           "rgba(147, 51, 234, 0.9)",
           "rgba(79, 70, 229, 0.9)",
           "rgba(59, 130, 246, 0.9)",
-          "rgba(139, 92, 246, 0.9)",
+          "rgba(108, 45, 253, 0.9)",
         ];
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
@@ -189,7 +189,7 @@ const Hero = () => {
               <img
                 src="/aditya_profile.jpeg"
                 alt="Profile"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover border border-purple-500/20 rounded-full"
               />
             </div>
             <div className="text-left space-y-4">

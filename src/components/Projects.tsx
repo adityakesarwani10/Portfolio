@@ -11,7 +11,7 @@ const Projects = () => {
       description: "A revolutionary AI platform that combines neural networks with quantum computing capabilities for unprecedented problem-solving abilities.",
       technologies: ["Node.js", "Express", "Javascript", "React"],
       image: "/NutrScan.png",
-      demo: "nutri-scan-plum.vercel.app",
+      demo: "https://nutri-scan-plum.vercel.app/",
       github: "https://github.com/adityakesarwani10/NutriScan"
     },
     {
@@ -19,7 +19,7 @@ const Projects = () => {
       description: "Bridging classical computing with quantum systems through an innovative middleware solution.",
       technologies: ["HTML", "CSS", "Node.js", "Expess"],
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      demo: "https://demo.example.com",
+      demo: "https://adityakesarwani10.github.io/RescuePrint/Component/Login/index.html ",
       github: "https://github.com"
     },
     {
