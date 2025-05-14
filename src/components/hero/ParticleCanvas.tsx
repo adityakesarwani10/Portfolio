@@ -160,14 +160,43 @@ const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ className }) => {
     }
 
     function init() {
-      particlesArray.length = 0;
+    particlesArray.length = 0;
 
-      for (let i = 0; i < numberOfParticles; i++) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        particlesArray.push(new Particle(x, y));
-      }
+    const width = window.innerWidth;
+    let numberOfParticles = 150;
+    let connectionDistance = 130;
+
+    if (width < 480) {
+      // Mobile
+      numberOfParticles = 80;
+      connectionDistance = 60;
+    } else if (width >= 480 && width < 768) {
+      // Small tablets
+      numberOfParticles = 100;
+      connectionDistance = 90;
+    } else if (width >= 768 && width < 1024) {
+      // Tablets
+      numberOfParticles = 130;
+      connectionDistance = 110;
+    } else if (width >= 1024 && width < 1440) {
+      // Desktop
+      numberOfParticles = 180;
+      connectionDistance = 140;
+    } else {
+      // Ultra-wide
+      numberOfParticles = 240;
+      connectionDistance = 180;
     }
+
+    for (let i = 0; i < numberOfParticles; i++) {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      particlesArray.push(new Particle(x, y));
+    }
+
+    (connect as any).distance = connectionDistance;
+  }
+
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);

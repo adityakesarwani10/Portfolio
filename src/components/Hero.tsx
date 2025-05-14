@@ -6,6 +6,8 @@ import img from "Portfolio/build-my-resume-kit/public/aditya_profile.jpeg";
 import { Button } from "./ui/button";
 import { ArrowDown, Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import ProfileSection from "./hero/ProfileSection";
+import ParticleCanvas from "./hero/ParticleCanvas";
 
 const Hero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
