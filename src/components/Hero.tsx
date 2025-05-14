@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -25,12 +26,17 @@ const Hero = () => {
     window.addEventListener("resize", resizeCanvas);
 
     const particlesArray: Particle[] = [];
-    const numberOfParticles = 200; // Increased number of particles
+    const numberOfParticles = 200;
+
+    // Animation variables
+    let time = 0;
+    const waveSpeed = 0.002;
+    const waveAmplitude = 50;
 
     const mouse = {
       x: null as number | null,
       y: null as number | null,
-      radius: 200, // Increased radius for better visibility
+      radius: 200,
     };
 
     window.addEventListener("mousemove", (event) => {
@@ -51,14 +57,18 @@ const Hero = () => {
       baseY: number;
       density: number;
       color: string;
+      angle: number;
+      velocity: number;
 
       constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
         this.baseX = x;
         this.baseY = y;
-        this.size = Math.random() * 3 + 1; // Increased size range
-        this.density = Math.random() * 40 + 1; // Adjusted density for smoother movement
+        this.size = Math.random() * 3 + 1;
+        this.density = Math.random() * 40 + 1;
+        this.angle = Math.random() * Math.PI * 2;
+        this.velocity = 0.05 + Math.random() * 0.2;
 
         const colors = [
           "rgba(147, 51, 234, 0.9)",
@@ -78,7 +88,12 @@ const Hero = () => {
       }
 
       update() {
+        // Autonomous movement based on time
+        const autonomousX = Math.sin(this.angle + time * this.velocity) * waveAmplitude;
+        const autonomousY = Math.cos(this.angle + time * this.velocity) * waveAmplitude;
+
         if (mouse.x != null && mouse.y != null) {
+          // Mouse interaction takes priority
           const dx = mouse.x - this.x;
           const dy = mouse.y - this.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -94,23 +109,25 @@ const Hero = () => {
             this.x += directionX;
             this.y += directionY;
           } else {
-            if (this.x !== this.baseX) {
-              const dx = this.x - this.baseX;
-              this.x -= dx / 10;
+            // Return to base position + autonomous movement
+            if (this.x !== this.baseX + autonomousX) {
+              const dx = this.x - (this.baseX + autonomousX);
+              this.x -= dx / 15;
             }
-            if (this.y !== this.baseY) {
-              const dy = this.y - this.baseY;
-              this.y -= dy / 10;
+            if (this.y !== this.baseY + autonomousY) {
+              const dy = this.y - (this.baseY + autonomousY);
+              this.y -= dy / 15;
             }
           }
         } else {
-          if (this.x !== this.baseX) {
-            const dx = this.x - this.baseX;
-            this.x -= dx / 10;
+          // Only autonomous movement when no mouse interaction
+          if (this.x !== this.baseX + autonomousX) {
+            const dx = this.x - (this.baseX + autonomousX);
+            this.x -= dx / 15;
           }
-          if (this.y !== this.baseY) {
-            const dy = this.y - this.baseY;
-            this.y -= dy / 10;
+          if (this.y !== this.baseY + autonomousY) {
+            const dy = this.y - (this.baseY + autonomousY);
+            this.y -= dy / 15;
           }
         }
       }
@@ -125,10 +142,10 @@ const Hero = () => {
           const dy = particlesArray[a].y - particlesArray[b].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) { // Increased connection distance
+          if (distance < 150) {
             opacityValue = 1 - distance / 150;
             ctx.strokeStyle = `rgba(147, 112, 219, ${opacityValue})`;
-            ctx.lineWidth = 1; // Slightly thicker lines
+            ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
             ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
@@ -150,6 +167,9 @@ const Hero = () => {
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Increment time for autonomous movement
+      time += waveSpeed;
 
       for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
