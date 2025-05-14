@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import img from "Portfolio/build-my-resume-kit/public/aditya_profile.jpeg";
 import { Button } from "./ui/button";
 import { ArrowDown, Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
@@ -16,21 +15,12 @@ const Hero = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-
     const particlesArray: Particle[] = [];
-    const numberOfParticles = 200; // Increased number of particles
 
     const mouse = {
       x: null as number | null,
       y: null as number | null,
-      radius: 200, // Increased radius for better visibility
+      radius: 200,
     };
 
     window.addEventListener("mousemove", (event) => {
@@ -57,8 +47,8 @@ const Hero = () => {
         this.y = y;
         this.baseX = x;
         this.baseY = y;
-        this.size = Math.random() * 3 + 1; // Increased size range
-        this.density = Math.random() * 40 + 1; // Adjusted density for smoother movement
+        this.size = Math.random() * 3 + 1;
+        this.density = Math.random() * 40 + 1;
 
         const colors = [
           "rgba(147, 51, 234, 0.9)",
@@ -117,7 +107,7 @@ const Hero = () => {
     }
 
     function connect() {
-      let opacityValue = 1;
+      const connectionDistance = (connect as any).distance || 150;
 
       for (let a = 0; a < particlesArray.length; a++) {
         for (let b = a; b < particlesArray.length; b++) {
@@ -125,10 +115,10 @@ const Hero = () => {
           const dy = particlesArray[a].y - particlesArray[b].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) { // Increased connection distance
-            opacityValue = 1 - distance / 150;
+          if (distance < connectionDistance) {
+            const opacityValue = 1 - distance / connectionDistance;
             ctx.strokeStyle = `rgba(147, 112, 219, ${opacityValue})`;
-            ctx.lineWidth = 1; // Slightly thicker lines
+            ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
             ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
@@ -141,11 +131,17 @@ const Hero = () => {
     function init() {
       particlesArray.length = 0;
 
+      const isMobile = window.innerWidth < 768;
+      const numberOfParticles = isMobile ? 120 : 200;
+      const connectionDistance = isMobile ? 80 : 150;
+
       for (let i = 0; i < numberOfParticles; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         particlesArray.push(new Particle(x, y));
       }
+
+      (connect as any).distance = connectionDistance;
     }
 
     function animate() {
@@ -160,19 +156,19 @@ const Hero = () => {
       requestAnimationFrame(animate);
     }
 
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init(); // reinitialize on resize
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
     init();
     animate();
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
-      window.removeEventListener("mousemove", (event) => {
-        mouse.x = event.x;
-        mouse.y = event.y;
-      });
-      window.removeEventListener("mouseout", () => {
-        mouse.x = null;
-        mouse.y = null;
-      });
     };
   }, []);
 
