@@ -93,6 +93,7 @@ class Particle {
 
 const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ className }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationRef = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -123,15 +124,18 @@ const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ className }) => {
       radius: 200,
     };
 
-    window.addEventListener("mousemove", (event) => {
+    const handleMouseMove = (event: MouseEvent) => {
       mouse.x = event.x;
       mouse.y = event.y;
-    });
+    };
 
-    window.addEventListener("mouseout", () => {
+    const handleMouseOut = () => {
       mouse.x = null;
       mouse.y = null;
-    });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseout", handleMouseOut);
 
     function connect() {
       let opacityValue = 1;
@@ -177,22 +181,19 @@ const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ className }) => {
       }
 
       connect();
-      requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
     }
 
     init();
     animate();
 
     return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
       window.removeEventListener("resize", resizeCanvas);
-      window.removeEventListener("mousemove", (event) => {
-        mouse.x = event.x;
-        mouse.y = event.y;
-      });
-      window.removeEventListener("mouseout", () => {
-        mouse.x = null;
-        mouse.y = null;
-      });
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseout", handleMouseOut);
     };
   }, []);
 
