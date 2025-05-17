@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -68,25 +67,17 @@ class Particle {
         this.y += directionY;
       } else {
         // Return to base position + autonomous movement
-        if (this.x !== this.baseX + autonomousX) {
-          const dx = this.x - (this.baseX + autonomousX);
-          this.x -= dx / 15;
-        }
-        if (this.y !== this.baseY + autonomousY) {
-          const dy = this.y - (this.baseY + autonomousY);
-          this.y -= dy / 15;
-        }
-      }
-    } else {
-      // Only autonomous movement when no mouse interaction
-      if (this.x !== this.baseX + autonomousX) {
         const dx = this.x - (this.baseX + autonomousX);
         this.x -= dx / 15;
-      }
-      if (this.y !== this.baseY + autonomousY) {
         const dy = this.y - (this.baseY + autonomousY);
         this.y -= dy / 15;
       }
+    } else {
+      // Always apply autonomous movement smoothly, even with no mouse interaction
+      const dx = this.x - (this.baseX + autonomousX);
+      this.x -= dx / 15;
+      const dy = this.y - (this.baseY + autonomousY);
+      this.y -= dy / 15;
     }
   }
 }
@@ -111,12 +102,12 @@ const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ className }) => {
     window.addEventListener("resize", resizeCanvas);
 
     const particlesArray: Particle[] = [];
-    const numberOfParticles = 200;
+    const numberOfParticles = 150;
 
     // Animation variables
     let time = 0;
-    const waveSpeed = 0.002;
-    const waveAmplitude = 50;
+    const waveSpeed = 0.052;
+    const waveAmplitude = 100;
 
     const mouse = {
       x: null as number | null,
@@ -160,47 +151,46 @@ const ParticleCanvas: React.FC<ParticleCanvasProps> = ({ className }) => {
     }
 
     function init() {
-    particlesArray.length = 0;
+      particlesArray.length = 0;
 
-    const width = window.innerWidth;
-    let numberOfParticles = 150;
-    let connectionDistance = 130;
+      const width = window.innerWidth;
+      let numberOfParticles = 150;
+      let connectionDistance = 130;
 
-    if (width < 480) {
-      // Mobile
-      numberOfParticles = 80;
-      connectionDistance = 60;
-    } else if (width >= 480 && width < 768) {
-      // Small tablets
-      numberOfParticles = 100;
-      connectionDistance = 90;
-    } else if (width >= 768 && width < 1024) {
-      // Tablets
-      numberOfParticles = 130;
-      connectionDistance = 110;
-    } else if (width >= 1024 && width < 1440) {
-      // Desktop
-      numberOfParticles = 180;
-      connectionDistance = 140;
-    } else {
-      // Ultra-wide
-      numberOfParticles = 240;
-      connectionDistance = 180;
+      if (width < 480) {
+        // Mobile
+        numberOfParticles = 80;
+        connectionDistance = 60;
+      } else if (width >= 480 && width < 768) {
+        // Small tablets
+        numberOfParticles = 100;
+        connectionDistance = 90;
+      } else if (width >= 768 && width < 1024) {
+        // Tablets
+        numberOfParticles = 130;
+        connectionDistance = 110;
+      } else if (width >= 1024 && width < 1440) {
+        // Desktop
+        numberOfParticles = 180;
+        connectionDistance = 140;
+      } else {
+        // Ultra-wide
+        numberOfParticles = 240;
+        connectionDistance = 180;
+      }
+
+      for (let i = 0; i < numberOfParticles; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        particlesArray.push(new Particle(x, y));
+      }
+
+      (connect as any).distance = connectionDistance;
     }
-
-    for (let i = 0; i < numberOfParticles; i++) {
-      const x = Math.random() * canvas.width;
-      const y = Math.random() * canvas.height;
-      particlesArray.push(new Particle(x, y));
-    }
-
-    (connect as any).distance = connectionDistance;
-  }
-
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       // Increment time for autonomous movement
       time += waveSpeed;
 
