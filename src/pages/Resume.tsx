@@ -18,7 +18,7 @@ const Resume = () => {
           <img
             src="/resumeaditya.jpg"
             alt="Aditya Kesarwani Resume"
-            className="w-lg max-w-xl rounded-lg shadow-lg"
+            className="w-full max-w-3xl h-auto rounded-lg shadow-lg"
           />
         </div>
 
