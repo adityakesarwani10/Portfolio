@@ -19,16 +19,16 @@ const Projects = () => {
       description: "Bridging classical computing with quantum systems through an innovative middleware solution.",
       technologies: ["HTML", "CSS", "Node.js", "Expess"],
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      demo: "https://adityakesarwani10.github.io/RescuePrint/Component/Login/index.html ",
-      github: "https://github.com"
+      demo: "https://adityakesarwani10.github.io/RescuePrint/Component/Login/index.html",
+      github: "https://github.com/adityakesarwani10/RescuePrint"
     },
     {
-      title: "Weather Forcast",
-      description: "Next-generation cloud infrastructure with built-in quantum-resistant security protocols.",
-      technologies: ["Rust", "Go", "Kubernetes", "WebAssembly"],
-      image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833",
-      demo: "https://weather-app-tau-six-74.vercel.app/",
-      github: "https://github.com"
+      title: "Cuisine",
+      description: "What your favorite food says about you.",
+      technologies: ["Next.js", "TailwindCSS", "Zod", "Shadcn UI","NextAuth","Jwt"],
+      image: "/cuisine.png",
+      demo: "https://cuisine-mocha.vercel.app/",
+      github: "https://github.com/adityakesarwani10/cuisine"
     }
   ];
 
