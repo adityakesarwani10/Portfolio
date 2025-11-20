@@ -21,16 +21,16 @@ const Projects = () => {
       description: "An real-word based problem based site that shows the the details of an unconsious victum an an accident case.",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
       tags: ["HTML", "CSS", "Javascript", "Node.js", "Express", "MongoDB"],
-      github: "https://github.com/adityakesarwani10/RescuePrint",
-      demo: "https://adityakesarwani10.github.io/RescuePrint/Component/Login/index.html"
+      demo: "https://adityakesarwani10.github.io/RescuePrint/Component/Login/index.html",
+      github: "https://github.com/adityakesarwani10/RescuePrint"
     },
     {
-      title: "Weather forecast",
-      description: "This is a site that shows the weather details in a real-time.",
-      image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833",
-      tags: ["HTML", "CSS", "Javascript"],
-      github: "https://github.com/adityakesarwani10/Weather-App",
-      demo: "https://weather-app-tau-six-74.vercel.app/"
+      title: "Cuisine",
+      description: "What your favorite food says about you.",
+      technologies: ["Next.js", "TailwindCSS", "Zod", "Shadcn UI","NextAuth","Jwt"],
+      image: "/cuisine.png",
+      demo: "https://cuisine-mocha.vercel.app/",
+      github: "https://github.com/adityakesarwani10/cuisine"
     }
   ];
 
